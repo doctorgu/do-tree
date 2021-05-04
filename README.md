@@ -38,7 +38,7 @@ const list = [
 ];
 ```
 
-## 결론
+## 해결책
 
 다음과 같이 DoTree 클래스를 이용하도록 구현
 
@@ -73,10 +73,6 @@ console.log(filtered);
 ```
 
 ## API
-
-### 위치
-
-src/util/DoTree.ts
 
 ### changeToChildrenProp
 
@@ -216,12 +212,12 @@ const found6 = DoTree.filter(list, TreeFilterOptions.returnTreeRespectChildren, 
 console.log(JSON.stringify(found6)); // [{a: 2, children: [{a: 3, children: [{a: 4, children: []}]}]}]
 ```
 
-### test
+## Test
 
 전체 함수에 대한 테스트를 실행해서 실패한 경우 에러를 발생시킴.
 
 - 예제
 
-```Javascript
-DoTree.test();
+```console
+yarn test
 ```
