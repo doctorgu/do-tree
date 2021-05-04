@@ -1,0 +1,25 @@
+{
+  "name": "do-tree",
+  "version": "1.0.0",
+  "description": "Helper functions for array with children property",
+  "repository": "https://github.com/doctorgu/do-tree",
+  "main": "dist/index.js",
+  "author": "doctorgu",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^13.11.0",
+    "jest": "^25.2.7",
+    "ts-jest": "^25.3.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "tsc",
+    "prepack": "yarn test --collectCoverage && yarn tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "do-tree",
+    "array-with-children"
+  ]
+}
