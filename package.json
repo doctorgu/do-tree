@@ -1,9 +1,9 @@
 {
   "name": "do-tree",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Helper functions for array with children property",
   "repository": "https://github.com/doctorgu/do-tree",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "author": "doctorgu",
   "license": "MIT",
   "devDependencies": {
