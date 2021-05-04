@@ -55,9 +55,7 @@ describe("DoTree tests", () => {
 
       const listTreeFound = DoTree.find(list, callback);
 
-      if (!listTreeFound) {
-        throw new Error(`Not found`);
-      }
+      if (!listTreeFound) throw new Error(`Not found`);
     }
 
     function findIndex() {
@@ -66,9 +64,7 @@ describe("DoTree tests", () => {
 
       const indiceFound = DoTree.findIndex(list, callback);
 
-      if (indiceFound.length !== 2) {
-        throw new Error(`Not found`);
-      }
+      if (indiceFound.length !== 2) throw new Error(`Not found`);
     }
 
     function some() {
@@ -77,9 +73,7 @@ describe("DoTree tests", () => {
 
       const listTreeFound = DoTree.some(list, callback);
 
-      if (!listTreeFound) {
-        throw new Error(`Not found`);
-      }
+      if (!listTreeFound) throw new Error(`Not found`);
     }
 
     function filter() {
@@ -95,9 +89,8 @@ describe("DoTree tests", () => {
         TreeFilterOptions.returnFlat,
         callback1
       );
-      if (found1.length !== 2) {
+      if (found1.length !== 2)
         throw new Error(`length is not 2. found1: ${found1}`);
-      }
 
       const found2 = DoTree.filter(
         list,
@@ -105,9 +98,8 @@ describe("DoTree tests", () => {
         callback1
       );
       const json2 = JSON.stringify(found2);
-      if (Array.from(json2.matchAll(/"a":/g)).length !== 2) {
+      if (Array.from(json2.matchAll(/"a":/g)).length !== 2)
         throw new Error(`length is not 2. json2: ${json2}`);
-      }
 
       const found3 = DoTree.filter(
         list,
@@ -115,9 +107,8 @@ describe("DoTree tests", () => {
         callback1
       );
       const json3 = JSON.stringify(found3);
-      if (Array.from(json3.matchAll(/"a":/g)).length !== 2) {
+      if (Array.from(json3.matchAll(/"a":/g)).length !== 2)
         throw new Error(`length is not 2. json3: ${json3}`);
-      }
 
       const callback2 = (item: any) => item.a >= 3;
 
@@ -126,18 +117,16 @@ describe("DoTree tests", () => {
         TreeFilterOptions.returnFlat,
         callback2
       );
-      if (found4.length !== 2) {
+      if (found4.length !== 2)
         throw new Error(`length is not 2. found4: ${found4}`);
-      }
 
       const found5 = DoTree.filter(
         list,
         TreeFilterOptions.returnTree,
         callback2
       );
-      if (found5.length !== 0) {
+      if (found5.length !== 0)
         throw new Error(`length is not 0. found5: ${found5}`);
-      }
 
       const found6 = DoTree.filter(
         list,
@@ -145,9 +134,8 @@ describe("DoTree tests", () => {
         callback2
       );
       const json6 = JSON.stringify(found6);
-      if (Array.from(json6.matchAll(/"a":/g)).length !== 3) {
+      if (Array.from(json6.matchAll(/"a":/g)).length !== 3)
         throw new Error(`length is not 3. json6: ${json6}`);
-      }
     }
 
     expect(changeToChildrenProp).not.toThrowError();
