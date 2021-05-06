@@ -1,8 +1,6 @@
 # DoTree
 
-## README
-
-- [Korean](README.ko.md)
+- [README Korean](README.ko.md)
 
 Functions needed for parent-child type arrays(like Menu, Sub tables of table).
 

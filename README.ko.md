@@ -1,8 +1,6 @@
 # DoTree
 
-## README
-
-- [English](README.md)
+- [README English](README.md)
 
 Parent, Child 구조를 가지는 배열(Menu, Table의 Sub Table 등)에서 필요한 함수 구현.
 
