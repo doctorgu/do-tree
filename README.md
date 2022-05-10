@@ -25,7 +25,7 @@ const list = [
     { name: 'b' },
     { name: 'c' }
 ];
-const filtered = list.filter(item => item !== item.name !== 'b');
+const filtered = list.filter(item => item.name !== 'b');
 console.log(filtered); // [ { name: 'a' }, { name: 'c' } ]
 ```
 
@@ -65,7 +65,7 @@ const list = [
             ]
     }
 ];
-const filtered = DoTree.filter(list, TreeFilterOptions.returnTree, (item => item !== item.name !== 'b'));
+const filtered = DoTree.filter(list, TreeFilterOptions.returnTree, (item => item.name !== 'b'));
 console.log(filtered);
 /*
 [
