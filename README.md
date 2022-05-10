@@ -17,7 +17,7 @@ yarn add do-tree
 ## Problem
 
 `map`, `find`, `filter`, `some` of Javascript functions on 1 depth array.
-For example, following returns name is b out of name is a, b, cb.
+For example, following returns name is not 'b'.
 
 ```Javascript
 const list = [
@@ -29,7 +29,7 @@ const filtered = list.filter(item => item.name !== 'b');
 console.log(filtered); // [ { name: 'a' }, { name: 'c' } ]
 ```
 
-But it is difficult to implement when you want to filter also sub items defined with `children` as following.
+But it is difficult to implement when you want to filter sub items defined with `children` as following.
 
 ```Javascript
 const list = [
